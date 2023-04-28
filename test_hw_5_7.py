@@ -52,7 +52,7 @@ def test_work_with_csv():
     dir_root_path = os.path.dirname(os.path.abspath(__file__))
     path_file_1 = os.path.join(dir_root_path, 'tmp', 'file_1.csv')
     # TODO оформить в тест, добавить ассерты и использовать универсальный путь
-    with open(path_file_1, 'w') as csvfile:
+    with open(path_file_1, 'w', newline='') as csvfile:
         csvwriter = csv.writer(csvfile, delimiter=',')
         csvwriter.writerow(['Anna', 'Pavel', 'Peter'])
         csvwriter.writerow(['Alex', 'Serj', 'Yana'])
